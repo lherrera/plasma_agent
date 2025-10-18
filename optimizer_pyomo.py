@@ -50,11 +50,10 @@ def solve_with_pyomo(inv_df: pd.DataFrame,
     m.I = pyo.Set(initialize=I)
     m.J = pyo.Set(initialize=J)
     m.A = pyo.Set(initialize=compat_pairs, dimen=2)
-
     m.x = pyo.Var(m.A, within=pyo.NonNegativeReals)
 
     def obj_rule(m):
-        alloc_term = sum(weights[j] * m.x[i, j] for (i, j) in m.A)
+        alloc_term = sum(weights.get(j,1.0) * m.x[i, j] for (i, j) in m.A)
         expiry_term = expiry_bias * sum(bonus[i] * sum(m.x[i, j] for j in m.J if (i, j) in m.A) for i in m.I)
         return alloc_term + expiry_term
     m.OBJ = pyo.Objective(rule=obj_rule, sense=pyo.maximize)

@@ -1,4 +1,3 @@
-
 import numpy as np
 import pandas as pd
 import datetime as dt
@@ -34,10 +33,10 @@ def generate_history_and_train(inv_df, dem_df, seed=123):
             rarity = 0.0
             rarity += 1.0 if (row["protein_class"]=="IgG" and row["min_titer"]=="high") else 0.0
             rarity += 0.5 if (isinstance(row["blood_type"], str) and len(row["blood_type"])>0) else 0.0
-            rarity += 0.5 if (row["segment"]=="hospital") else 0.0
+            rarity += 0.5 if (row["segment"] in ["hospital","biotech"]) else 0.0
             today = dt.date.today()
             days_to_due = (pd.to_datetime(row["due_date"]).date() - today).days + dd_shift
-            risk = (0.4 * (vol/50.0) + 0.3 * (max(0, 10 - days_to_due)/10.0) + 0.3 * rarity)
+            risk = (0.4 * (vol/400.0) + 0.3 * (max(0, 10 - days_to_due)/10.0) + 0.3 * rarity)
             urgency = 1 + 4 * np.tanh(risk)
             hist.append({
                 "segment": row["segment"],
