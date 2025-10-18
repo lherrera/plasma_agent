@@ -1,0 +1,5 @@
+order_id,segment,protein_class,min_titer,blood_type,requested_volume_l,due_date,priority
+O00001,hospital,IgG,med,O+,80,2025-10-25,3
+O00002,pharma,Albumin,low,,40,2025-10-26,2
+O00003,research,Fibrinogen,low,,20,2025-10-23,1
+O00004,hospital,IgG,high,O-,30,2025-10-24,3

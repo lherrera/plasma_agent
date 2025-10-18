@@ -1,0 +1,14 @@
+[project]
+name = "plasma-agent-ml-demo"
+version = "0.4.0"
+description = "Streamlit demo for plasma inventory optimization with Heuristic vs Pyomo vs ML-learned priorities"
+requires-python = ">=3.9"
+dependencies = [
+    "streamlit",
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "pyomo",
+    "scikit-learn",
+    "highspy>=1.11.0",
+]

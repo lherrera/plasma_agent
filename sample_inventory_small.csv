@@ -1,0 +1,6 @@
+batch_id,protein_class,titer,blood_type,volume_l,collection_date,expiry_date,compliance
+B00001,IgG,high,O+,60,2025-10-01,2025-11-05,ok
+B00002,Albumin,low,A-,30,2025-10-05,2025-10-28,ok
+B00003,IgG,med,O-,40,2025-10-02,2025-10-24,ok
+B00004,Fibrinogen,low,AB+,25,2025-09-30,2025-10-22,ok
+B00005,IgG,med,A+,50,2025-10-04,2025-11-01,ok
