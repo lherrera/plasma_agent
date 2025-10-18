@@ -23,10 +23,11 @@ The Plasma Inventory Optimizer allocates plasma batches to downstream customers 
 
 ## 🧠 Why It Exists
 
-Grifols (and similar plasma companies) must match **supply variability** (donations, expiry windows) with **volatile demand** from:
+Plasma companies must match **supply variability** (donations, expiry windows) with **volatile demand** from:
 - 🏥 **Hospitals** – transfusions and rare-disease treatments  
 - 💊 **Pharma manufacturing** – immunoglobulins, clotting factors, albumin  
-- 🧪 **Research institutions** – controlled, type-specific plasma for experimentation  
+- 🧪 **Research institutions** – controlled, type-specific plasma for experimentation
+- **biotech startups, blood banks, export markets, humanitarian programs, others**
 
 This app helps visualize trade-offs between urgency, throughput, and specificity — and quantify them.
 
